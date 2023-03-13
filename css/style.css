@@ -1,0 +1,126 @@
+:root{
+  --font-primary-color: #757F91;
+  --font-secondary-color: #CACDD1;
+  --primary-color: #303C54;
+  --secondary-color: #3C4B64;
+  --main-font : 1.5rem;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+  font-family: 'Ubuntu', sans-serif;
+}
+.main-nav{
+  width: 100%;
+  float: right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--font-secondary-color);
+}
+ .main-nav__ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  margin: 1.5rem;
+}
+.main-nav__li a, .container__body__ul a{
+  text-decoration: none;
+  margin-right: 1.2rem;
+  font-size: var(--main-font);
+  font-weight: 500;
+  color: var(--font-secondary-color);
+}
+.main-nav__li a:hover{
+  font-weight: 700; 
+}
+.main-nav__li a>i{
+  transition: all 2s ease;
+  margin-right: 2.1rem;
+}
+.main-nav__li a>i:hover{
+  color: #000;
+  transform: scale(1.5);
+} 
+
+/*aside*/
+.main-aside{ 
+  display: none;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: var(--secondary-color) ;
+}
+.container-aside{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.container-aside__header{
+  display: flex;
+  justify-content: center;
+  background: var(--primary-color) ;
+}
+.container-aside__header__logo{
+  width: 9rem;
+  padding-bottom: 1rem;
+}
+.container__body{
+  padding: 1rem 0.5rem;
+}
+.container__body__ul{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-top: 1rem;
+}
+.container__body__ul a{
+  font-size: var(--main-font);
+}
+.container__body__li {
+  margin: 1rem 0 1rem 1rem;
+}
+.container__body__li .icon{
+  margin-right: 1.5rem;
+}
+.separator{
+  display: flex;
+  width: 100%;
+  height: 10px;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 1rem;
+}
+.container__body__title{
+  font-size: 1.3rem;
+  /* padding-left: 1rem; */
+  text-transform: uppercase;
+  color: var(--font-primary-color);
+  font-weight: 900;
+}
+
+.close-menu{
+  font-size: 1.5rem;
+  position: absolute;
+  color: #fff;
+  right: 11px;
+  margin-top: 6px;
+  cursor: pointer;  
+}
+/*content*/
+.content{
+  position: absolute;
+  width: 100%;
+  height: 87.4vh;
+  top: 96px;
+  z-index: -99999;
+}
+.main-frame{
+  padding: 0;
+  margin: 0;
+}

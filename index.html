@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My first layout">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/tablet.css" media="screen and (min-width: 768px)">
+  <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 1024px)">
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>My first layout</title>
+</head>
+<body>
+<header>
+  <nav class="main-nav">
+    <ul class="main-nav__ul">
+      <li class="main-nav__li"><a href="#" id="menu"><i class="fa-solid fa-bars"></i></a></li>
+      <li class="main-nav__li"><a href="#" onclick="renderFrame(this,'dashboard')">Dashboard</a></li>
+      <li class="main-nav__li"><a href="#" onclick="renderFrame(this,'users')">Users</a></li>
+      <li class="main-nav__li"><a href="#" onclick="renderFrame(this,'settings')">Settings</a></li>
+    </ul>
+    <ul class="main-nav__ul">
+      <li class="main-nav__li"><a href="#" onclick="renderFrame(this,'notifications')"><i class="fa-regular fa-bell"></i></a></li>
+      <li class="main-nav__li"><a href="#" onclick="renderFrame(this,'messages')"><i class="fa-brands fa-facebook-messenger"></i></a></li>
+      <li class="main-nav__li"><a href="#" onclick="renderFrame(this,'mail')"><i class="fa-regular fa-envelope-open"></i></a></li>
+      <li class="main-nav__li"><a href="#" onclick="renderFrame(this,'profile')"><i class="fa-regular fa-user"></i></a></li>
+    </ul>
+  </nav>
+</header>  
+<main>
+  <aside class="main-aside" id="main-aside">
+    <div class="container-aside">
+      <div class="container-aside__header">
+        <img src="images/logo.png" alt="logo" class="container-aside__header__logo">
+        <i class="fa-solid fa-x close-menu" id="close-menu"></i>
+      </div>
+      <div class="container__body">
+        <ul class="container__body__ul">
+          <li class="container__body__li"><a href="#" onclick="renderFrame(this,'dashboard')"><i class="fa-solid fa-gauge icon"></i>Dashboard</a></li>
+        </ul>
+        <span class="separator"></span>
+        <span class="container__body__title">theme</span>
+        <ul class="container__body__ul">
+          <li class="container__body__li"><a href="#" onclick="renderFrame(this,'color')"><i class="fa-solid fa-palette icon"></i>Color</a></li>
+          <li class="container__body__li"><a href="#" onclick="renderFrame(this,'typography')"><i class="fa-solid fa-pen icon"></i>Typography</a></li>
+        </ul>
+        <span class="separator"></span>
+        <span class="container__body__title">components</span>
+        <ul class="container__body__ul">
+          <li class="container__body__li"><a href="#" onclick="renderFrame(this,'base')"><i class="fa-solid fa-puzzle-piece icon"></i>Base</a></li>
+          <li class="container__body__li"><a href="#" onclick="renderFrame(this,'buttons')"><i class="fa-solid fa-ellipsis-vertical icon"></i>Buttons</a></li>
+          <li class="container__body__li"><a href="#" onclick="renderFrame(this,'charts')"><i class="fa-solid fa-chart-simple icon"></i>Charts</a></li>
+          <li class="container__body__li"><a href="#" onclick="renderFrame(this,'forms')"><i class="fa-solid fa-table icon"></i>Forms</a></li>
+          <li class="container__body__li"><a href="#" onclick="renderFrame(this,'icons')"><i class="fa-solid fa-font-awesome icon"></i>Icons</a></li>
+          <li class="container__body__li"><a href="#" onclick="renderFrame(this,'notifications')"><i class="fa-regular fa-bell icon"></i>Notifications</a></li>
+          <li class="container__body__li"><a href="#" onclick="renderFrame(this,'widgets')"><i class="fa-solid fa-screwdriver-wrench icon"></i>Widgets</a></li>
+        </ul>
+        <span class="separator"></span>
+        <span class="container__body__title">extras</span>
+        <ul class="container__body__ul">
+          <li class="container__body__li"><a href="#" onclick="renderFrame(this,'pages')"><i class="fa-regular fa-file icon"></i>Pages</a></li>
+          <li class="container__body__li"><a href="#" onclick="renderFrame(this,'docs')"><i class="fa-regular fa-folder icon"></i>Docs</a></li>
+          <li class="container__body__li"><a href="#" onclick="renderFrame(this,'pro')"><i class="fa-solid fa-gem icon"></i>PRO VERSION</a></li>
+        </ul>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="content">
+    <iframe src="./src/dashboard.html" frameborder="0" id="main-frame" class="main-frame"></iframe>
+  </div>
+</main>
+<script src="js/app.js"></script>
+</body>
+</html>
