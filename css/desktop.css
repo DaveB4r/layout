@@ -1,9 +1,12 @@
 .content{
   height: 94.9vh;
 }
-.container__body__li>a:hover{
-  padding: 10px;
-  background: #c3c3c3;
+.container__body__li a:hover{
   color: #000;
   font-weight: 600;
+}
+.container__body__li:hover{
+  padding: 10px;
+  background: #c3c3c3;
+  
 }
